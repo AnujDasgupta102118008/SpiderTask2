@@ -201,3 +201,8 @@ app.post('/delete', function (req, res) {
         }
     });
 });
+// Logout
+app.get('/logout', function (req, res) {
+    res.clearCookie('username');
+    res.render('login', { loginmsg:"", regmsg:"" });
+});
